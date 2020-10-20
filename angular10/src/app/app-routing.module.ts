@@ -3,10 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import {DepartmentComponent} from './department/department.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-{path:'department',component:DepartmentComponent}
+{path:'department',component:DepartmentComponent},
+{path:'login',component:LoginComponent}
+
 
 ];
 

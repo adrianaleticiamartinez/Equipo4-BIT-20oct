@@ -12,6 +12,8 @@ import{SharedService} from './shared.service';
 
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
     DepartmentComponent,
     ShowDepComponent,
     AddEditDepComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]
