@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
+
 /**
  *
  * @author giova
@@ -23,13 +24,48 @@ public class conexionBBVA {
                   Class.forName("org.postgresql.Driver");
                   Connection conex = DriverManager.getConnection(cadena,user,pass);
                   java.sql.Statement st = conex.createStatement();
-                  String sql =
-                      "select idcliente, fechanacimiento from clientes";
+                  //manager
+                 /* String sql =
+                      "select idcliente, nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, sexo, segmento, nacionalidad, rfc, tipoID, numeroID, cuenta, email from clientes";
                   ResultSet result = st.executeQuery(sql);
                   while(result.next()) {
-                      String usuario = result.getString("idcliente");
-                      String clave = result.getString("fechanacimiento");
-                      System.out.println("idCliente: "+usuario + " fecha nacimiento: " + clave);
+                      String idcliente = result.getString("idcliente");
+                      String nombre = result.getString("nombre");
+                      String apellidoPaterno = result.getString("apellidoPaterno");
+                      String apellidoMaterno = result.getString("apellidoMaterno");
+                      String fechaNacimiento = result.getString("fechaNacimiento");
+                      String sexo = result.getString("sexo");
+                      String segmento = result.getString("segmento");
+                      String nacionalidad = result.getString("nacionalidad");
+                      String rfc = result.getString("rfc");
+                      String tipoID = result.getString("tipoID");
+                      String numeroID = result.getString("numeroID");
+                      String cuenta = result.getString("cuenta");
+                      String email = result.getString("email");
+                      
+                      System.out.println("idcliente: "+ idcliente +" nombre: "+nombre +" apellidoPaterno: "+apellidoPaterno +  " apellidoMaterno: "+apellidoMaterno + " fechaNacimiento: "+ fechaNacimiento+ " sexo: "+sexo+" segmento: "+segmento+ " nacionalidad "+nacionalidad+ " rfc: "+rfc+" tipoID: "+tipoID+" numeroID: "+numeroID+" cuenta: "+cuenta+ "email: "+email);
+                  }*/
+                 
+                 //manager
+                  String sql =
+                      "select idcliente, nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, sexo, segmento, nacionalidad, rfc, tipoID, numeroID, cuenta, email from clientes";
+                  ResultSet result = st.executeQuery(sql);
+                  while(result.next()) {
+                      String idcliente = result.getString("idcliente");
+                      String nombre = result.getString("nombre");
+                      String apellidoPaterno = result.getString("apellidoPaterno");
+                      String apellidoMaterno = result.getString("apellidoMaterno");
+                      String fechaNacimiento = result.getString("fechaNacimiento");
+                      String sexo = result.getString("sexo");
+                      String segmento = result.getString("segmento");
+                      String nacionalidad = result.getString("nacionalidad");
+                      String rfc = result.getString("rfc");
+                      String tipoID = result.getString("tipoID");
+                      String numeroID = result.getString("numeroID");
+                      String cuenta = result.getString("cuenta");
+                      String email = result.getString("email");
+                      
+                      System.out.println("idcliente: "+ idcliente +" nombre: "+nombre +" apellidoPaterno: "+apellidoPaterno +  " apellidoMaterno: "+apellidoMaterno + " fechaNacimiento: "+ fechaNacimiento+ " sexo: "+sexo+" segmento: "+segmento+ " nacionalidad "+nacionalidad+ " rfc: "+rfc+" tipoID: "+tipoID+" numeroID: "+numeroID+" cuenta: "+cuenta+ "email: "+email);
                   }
                   result.close();
                   st.close();
