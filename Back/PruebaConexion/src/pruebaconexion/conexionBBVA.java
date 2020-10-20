@@ -78,7 +78,12 @@ public class conexionBBVA {
                       String cuenta = result.getString("cuenta");
                       String email = result.getString("email");
                       
-                      System.out.println("idcliente: "+ idcliente +" nombre: "+nombre +" apellidoPaterno: "+apellidoPaterno.substring(0,3) +  " apellidoMaterno: "+apellidoMaterno.substring(0,3) + " fechaNacimiento: "+ fechaNacimiento.substring(0,3)+ " sexo: "+sexo+" segmento: "+segmento+ " nacionalidad "+nacionalidad.substring(0,3)+ " rfc: "+rfc.substring(0,3)+" tipoID: "+tipoID.substring(0,3)+" numeroID: "+numeroID.substring(0,3)+" cuenta: "+cuenta+ "email: "+email.substring(0,3));
+                      String apellidoPaternotemp="";
+                      apellidoPaternotemp=apellidoPaterno.substring(0,3);
+                      for(int n=3; n<apellidoPaterno.length(); n++){
+                           apellidoPaternotemp=apellidoPaternotemp.concat("*");
+                      }
+                      System.out.println("idcliente: "+ idcliente +" nombre: "+nombre +" apellidoPaterno: "+apellidoPaternotemp +  " apellidoMaterno: "+apellidoMaterno.substring(0,3) + " fechaNacimiento: "+ fechaNacimiento.substring(0,3)+ " sexo: "+sexo+" segmento: "+segmento+ " nacionalidad "+nacionalidad.substring(0,3)+ " rfc: "+rfc.substring(0,3)+" tipoID: "+tipoID.substring(0,3)+" numeroID: "+numeroID.substring(0,3)+" cuenta: "+cuenta+ "email: "+email.substring(0,3));
                   }
                   result.close();
                   st.close();
