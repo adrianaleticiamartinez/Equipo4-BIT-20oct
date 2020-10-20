@@ -83,7 +83,42 @@ public class conexionBBVA {
                       for(int n=3; n<apellidoPaterno.length(); n++){
                            apellidoPaternotemp=apellidoPaternotemp.concat("*");
                       }
-                      System.out.println("idcliente: "+ idcliente +" nombre: "+nombre +" apellidoPaterno: "+apellidoPaternotemp +  " apellidoMaterno: "+apellidoMaterno.substring(0,3) + " fechaNacimiento: "+ fechaNacimiento.substring(0,3)+ " sexo: "+sexo+" segmento: "+segmento+ " nacionalidad "+nacionalidad.substring(0,3)+ " rfc: "+rfc.substring(0,3)+" tipoID: "+tipoID.substring(0,3)+" numeroID: "+numeroID.substring(0,3)+" cuenta: "+cuenta+ "email: "+email.substring(0,3));
+                      String apellidoMaternotemp="";
+                      apellidoMaternotemp=apellidoMaterno.substring(0,3);
+                      for(int n=3; n<apellidoMaterno.length(); n++){
+                           apellidoMaternotemp=apellidoMaternotemp.concat("*");
+                      }
+                      String fechadenacimientotemp="";
+                      fechadenacimientotemp=fechaNacimiento.substring(0,3);
+                      for(int n=3; n<fechaNacimiento.length(); n++){
+                           fechadenacimientotemp=fechadenacimientotemp.concat("*");
+                      }
+                      String nacionalidadtemp="";
+                      nacionalidadtemp=nacionalidad.substring(0,3);
+                      for(int n=3; n<nacionalidad.length(); n++){
+                           nacionalidadtemp=nacionalidadtemp.concat("*");
+                      }
+                      String rfctemp="";
+                      rfctemp=rfc.substring(0,3);
+                      for(int n=3; n<rfc.length(); n++){
+                           rfctemp=rfctemp.concat("*");
+                      }
+                      String tipoIDtemp="";
+                      tipoIDtemp=tipoID.substring(0,3);
+                      for(int n=3; n<tipoID.length(); n++){
+                           tipoIDtemp=tipoIDtemp.concat("*");
+                      }
+                      String numeroIDtemp="";
+                      numeroIDtemp=numeroID.substring(0,3);
+                      for(int n=3; n<numeroID.length(); n++){
+                           numeroIDtemp=numeroIDtemp.concat("*");
+                      }
+                      String emailtemp="";
+                      emailtemp=email.substring(0,3);
+                      for(int n=3; n<email.length(); n++){
+                           emailtemp=emailtemp.concat("*");
+                      }
+                      System.out.println("idcliente: "+ idcliente +" nombre: "+nombre +" apellidoPaterno: "+apellidoPaternotemp +  " apellidoMaterno: "+apellidoMaternotemp + " fechaNacimiento: "+ fechadenacimientotemp+ " sexo: "+sexo+" segmento: "+segmento+ " nacionalidad "+nacionalidadtemp+ " rfc: "+rfctemp+" tipoID: "+tipoIDtemp+" numeroID: "+numeroIDtemp+" cuenta: "+cuenta+ "email: "+emailtemp);
                   }
                   result.close();
                   st.close();
