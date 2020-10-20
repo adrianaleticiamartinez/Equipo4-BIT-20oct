@@ -5,17 +5,34 @@
  */
 package pruebaconexion;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author giova
  */
 public class Conexion2 extends javax.swing.JFrame {
-
+DefaultTableModel modelo;
     /**
      * Creates new form Conexion2
      */
     public Conexion2() {
         initComponents();
+        modelo= new DefaultTableModel();
+        modelo.addColumn("idCliente");
+        modelo.addColumn("nombre");
+        modelo.addColumn("ApePaterno");
+        modelo.addColumn("ApeMaterno");
+        modelo.addColumn("FechaNacimiento");
+        modelo.addColumn("sexo");
+        modelo.addColumn("segmento");
+        modelo.addColumn("nacionalidad");
+        modelo.addColumn("rfc");
+        modelo.addColumn("tipoID");
+        modelo.addColumn("numeroID");
+        modelo.addColumn("cuenta");
+        modelo.addColumn("email");
+        this.jTable1.setModel(modelo);
     }
 
     /**
@@ -79,7 +96,7 @@ public class Conexion2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1002, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -87,17 +104,15 @@ public class Conexion2 extends javax.swing.JFrame {
                     .addComponent(campo1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campo2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(campo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -107,7 +122,7 @@ public class Conexion2 extends javax.swing.JFrame {
                         .addComponent(campo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         pack();
@@ -131,7 +146,7 @@ public class Conexion2 extends javax.swing.JFrame {
         a.consulta(temp1, temp2);
         System.out.println(campo1.getText()+ campo2.getText());
         a.consulta("Manager", "BF000002999");
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
