@@ -8,6 +8,7 @@ package pruebaconexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import javax.swing.JTable;
 
 
 /**
@@ -252,6 +253,7 @@ public class conexionBBVA {
 
 
                           System.out.println("idcliente: "+ idcliente +" nombre: "+nombre +" apellidoPaterno: "+apellidoPaternotemp +  " apellidoMaterno: "+apellidoMaternotemp + " fechaNacimiento: "+ fechadenacimientotemp+ " sexo: "+sexo+" segmento: "+segmento+ " nacionalidad "+nacionalidadtemp+ " rfc: "+rfctemp+" tipoID: "+tipoIDtemp+" numeroID: "+numeroIDtemp+" cuenta: "+cuenta+ "email: "+emailtemp);
+                          
                       }
                 } 
                   st.close();
